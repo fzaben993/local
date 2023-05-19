@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri "https://certifytheweb.s3.amazonaws.com/downloads/archive/CertifyTheWebSetup_V5.6.8.exe" -OutFile "CertifyTheWebSetup_V5.6.8.exe"; Start-Process "CertifyTheWebSetup_V5.6.8.exe" -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" -Wait; Remove-Item "CertifyTheWebSetup_V5.6.8.exe"

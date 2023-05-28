@@ -29,6 +29,3 @@ if ($PendingReboot) {
 } else {
     Write-Host "No pending reboot is detected."
 }
-
-
-#$UpdateSession = New-Object -ComObject Microsoft.Update.Session; $UpdateSearcher = $UpdateSession.CreateUpdateSearcher(); $SearchResult = $UpdateSearcher.Search("IsInstalled=0 and Type='Software' and IsHidden=0"); $Updates = $SearchResult.Updates; $Downloader = $UpdateSession.CreateUpdateDownloader(); $Downloader.Updates = $Updates; $Downloader.Download(); $Installer = $UpdateSession.CreateUpdateInstaller(); $Installer.Updates = $Updates; $InstallationResult = $Installer.Install()

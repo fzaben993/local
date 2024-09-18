@@ -12,7 +12,7 @@ powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object Syst
 
 ```pwsh
 powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/rewrite.ps1'))"
-``
+```
 
 ## DB Server
 

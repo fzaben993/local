@@ -14,6 +14,12 @@ powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object Syst
 powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/rewrite.ps1'))"
 ```
 
+### Certify The Web
+
+```pwsh
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/certify-the-web.ps1'))"
+```
+
 ## DB Server
 
 ### MSSQL Server Install Config File

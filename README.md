@@ -6,10 +6,14 @@
 
 ```pwsh
 powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/profile.ps1'))"
-. $PROFILE
-github "pwsh7"
+# Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/profile.ps1'))
 
+. $PROFILE
+
+github "pwsh7"
 # C:\Users\Administrator\AppData\Local\Microsoft\powershell\pwsh.exe
+
+Start-Process "C:\Users\Administrator\AppData\Local\Microsoft\powershell\pwsh.exe" ; exit
 
 github "iis"
 github "rewrite"

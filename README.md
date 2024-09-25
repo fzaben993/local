@@ -2,6 +2,24 @@
 
 ## Web Server
 
+### Aliases
+
+```pwsh
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/profile.ps1'))"
+. $PROFILE
+github "pwsh7"
+
+# C:\Users\Administrator\AppData\Local\Microsoft\powershell\pwsh.exe
+
+github "iis"
+github "rewrite"
+
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fzaben993/local/refs/heads/main/SqlInstallConfig.ini" -OutFile "SqlInstallConfig.ini"
+# Don't Forget to change server name and pasword 
+
+github "sql-server"
+github "ssms"
+```
 ### IIS Install
 
 ```pwsh

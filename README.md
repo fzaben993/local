@@ -47,7 +47,7 @@ powershell -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object Syst
 ### MSSQL Server Install Config File
 
 ```pwsh
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fzaben993/local/refs/heads/main/SqlInstallConfig.ini" -OutFile "SqlInstallConfig.ini"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/fzaben993/local/refs/heads/main/SqlInstallConfig.ini" -OutFile "SqlInstallConfig.ini"; (Get-Content -Path "SqlInstallConfig.ini" -Raw) -replace 'SERVER_NAME', $env:COMPUTERNAME | Set-Content -Path "SqlInstallConfig.ini"
 ```
 
 ### MSSQL Server

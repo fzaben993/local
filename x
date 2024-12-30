@@ -59,3 +59,4 @@ dotnet tool install win-acme --global
 Refresh-EnvironmentVariables
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/iis.ps1'))
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/fzaben993/local/main/rewrite.ps1'))
+https://we.tl/t-IOGOXM09cM

@@ -1,4 +1,29 @@
 https://we.tl/t-n1YSoY66rt
+
+# Variables
+$dnsName = "erp-web.local"
+$siteName = "Default Web Site"
+
+# Generate Self-Signed Certificate
+$cert = New-SelfSignedCertificate -DnsName $dnsName -CertStoreLocation "Cert:\LocalMachine\My"
+$thumbprint = $cert.Thumbprint
+
+# Bind Certificate to IIS
+New-WebBinding -Name $siteName -Protocol https -Port 443 -IPAddress * -HostHeader $null
+$binding = Get-WebBinding -Name $siteName -Protocol https
+$binding.AddSslCertificate($thumbprint, "My")
+
+# Export Certificate (Optional)
+Export-Certificate -Cert $cert -FilePath "C:\temp\erp-web-cert.cer"
+
+# Import to Trusted Root (Optional)
+Import-Certificate -FilePath "C:\temp\erp-web-cert.cer" -CertStoreLocation Cert:\LocalMachine\Root
+
+# Restart IIS
+iisreset
+
+
+
 $sqlCmdLog = "$(Get-Date): Running SQL Command"
 
 echo "Deleting all sessions from the Sabeen_GAM database... at $sqlCmdLog" >> C:\Scripts\DeleteSessions.log 

@@ -1,3 +1,4 @@
+openssl pkcs12 -export -out mycertificate.pfx -inkey myprivate.key -in mycertificate.crt
 https://we.tl/t-n1YSoY66rt
 https://slproweb.com/download/Win64OpenSSL-3_4_0.msi
 # Step 1: Download OpenSSL from the official website

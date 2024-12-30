@@ -1,4 +1,4 @@
-https://we.tl/t-wIhd6LpWss
+https://we.tl/t-n1YSoY66rt
 $sqlCmdLog = "$(Get-Date): Running SQL Command"
 
 echo "Deleting all sessions from the Sabeen_GAM database... at $sqlCmdLog" >> C:\Scripts\DeleteSessions.log 

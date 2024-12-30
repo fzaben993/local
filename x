@@ -1,4 +1,29 @@
 https://we.tl/t-n1YSoY66rt
+https://slproweb.com/download/Win64OpenSSL-3_4_0.msi
+# Step 1: Download OpenSSL from the official website
+# [https://slproweb.com/products/Win32OpenSSL.html]
+
+# Step 2: Generate Private Key (2048-bit)
+openssl genrsa -out myprivate.key 2048
+
+# Step 3: Generate CSR (Certificate Signing Request)
+openssl req -new -key myprivate.key -out myrequest.csr
+
+# Step 4: Generate Self-Signed Certificate (Valid for 5 years)
+openssl x509 -req -days 1825 -in myrequest.csr -signkey myprivate.key -out mycertificate.crt
+
+# (Optional) Step 5: Combine .crt and .key into .pfx for IIS import
+openssl pkcs12 -export -out mycertificate.pfx -inkey myprivate.key -in mycertificate.crt
+
+# (Optional) Step 6: Convert .crt to .der format for trusted root certificate import
+openssl x509 -outform der -in mycertificate.crt -out mycertificate.der
+
+# Step 7: Import the certificate into IIS
+# Open IIS Manager, import the certificate under Server Certificates, and bind it to your site.
+
+# Step 8: Restart IIS to apply the changes
+iisreset
+
 
 # Variables
 $dnsName = "erp-web.local"
